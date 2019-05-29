@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/prism.css">
+  <link rel="icon" href="./favicon.ico">
 </head>
 <body>
   <div id="app"></div>
@@ -17,11 +18,12 @@
       repo: 'https://github.com/twoBxx/xx_docs',
 	  maxLevel: 3,//最大支持渲染的标题层级
 	  loadSidebar: true,
-	  //homepage: 'HomePage.md',
+	  alias: {  '/.*/_sidebar.md': '/_sidebar.md' },
+      homepage: 'homepage.md',
 	  //coverpage: true,//封面,_coverpage.md
 	  auto2top: true,//切换页面后是否自动跳转到页面顶部
 	  //ga: 'UA-138586553-1',
-	  //logo: 'https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-3logo-透明.png' ,
+	  logo: 'http://q1.qlogo.cn/g?b=qq&nk=1766856800&s=100&t=1559045640',
      search: {
 	    //maxAge: 86400000, // 过期时间，单位毫秒，默认一天
         paths: 'auto',

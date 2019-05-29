@@ -1,1 +1,2 @@
-* [sublimeText配置](docs/sublimeText)
+* 关于软件
+    * [sublimeText配置](softwares/sublimeText)
