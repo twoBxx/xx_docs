@@ -2,9 +2,10 @@
 
 ## 安装
 ### 前置：**git** && **zsh**
-1. 安装zsh（若有可跳过），执行命令：`yum install -y zsh`
-2. 安装git（若有可跳过），执行命令：`yum install -y git`
-3. 安装oh my zsh（支持2种方式安装），执行命令（二选一即可）：
+1. 安装zsh（若有可跳过），执行命令：`yum install -y zsh` 
+2. 设置终端为zsh `chsh -s /bin/zsh`
+3. 安装git（若有可跳过），执行命令：`yum install -y git`
+4. 安装oh my zsh（支持2种方式安装），执行命令（二选一即可）：
     1. `sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
     2. `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
