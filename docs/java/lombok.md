@@ -1,6 +1,4 @@
-## lombok
-
-### 1. 安装 Lombok
+## 1. 安装 Lombok
 
 使用 Lombok 之前我们先要在所使用的 IDE 中进行集成安装，这里以 IDEA 为例，安装步骤十分简单：
 
@@ -24,7 +22,7 @@
 
 > 注意：`pom` 依赖设置 scope 为 `provided`，是为了让 Lombok 库不被打包进程序。
 
-### 2. @Getter/@Setter
+## 2. @Getter/@Setter
 
 > `@Getter/@Setter` 注解就能帮我们省去`getter` 和 `setter` 方法的维护，由 Lombok 对 `User` 类自动生成 `getter` 和 `setter` 方法，两者最终的字节码时一样的。
 
@@ -54,7 +52,7 @@ public class User {
 private String password;
 ```
 
-### 3. @NonNull
+## 3. @NonNull
 
 用于标记类中不能允许为 `null` 的字段或者参数上，任何使用该字段的地方都生成空指针判断代码，若`@NonNull` 标记的变量为 null，抛出 `NullPointException`  异常。
 ```java
@@ -93,7 +91,7 @@ public class User {
 }
 ```
 
-### 4. 构造器注解
+## 4. 构造器注解
 Lombok 提供了三个不同构造器注解 `@NoArgsConstructor / @AllArgsConstructor / @RequiredArgsConstructor` 分别对用不同构造器方法处理方式。
 
 *   `@NoArgsConstructor` 为实体类生成无参的构造器方法
@@ -113,7 +111,7 @@ public class User3 {
 ```
     编译成功后使用构造器方法时就是这样的效果：`User3 user3 = new User3("user3", "zxc123");`
 
-### 5. @ToString
+## 5. @ToString
 
 `@ToString` 会给类自动生成易阅读的 `toString` 方法，带上有所非静态字段的属性名称和值，这样就十分便于我们日常开发时进行的打印操作。
 ```java
@@ -152,7 +150,7 @@ public class User2 {
 ```
 打印 `User2` 对象的日志效果就是：`User2(username=user2, password=zcx123)`。
 
-### 6. @EqualsAndHashCode
+## 6. @EqualsAndHashCode
 
 `@EqualsAndHashCode` 注解就是用于根据类所拥有的非静态字段自动重写 `equals` 方法和 hashCode 方法,方便我们用于对象间的比较。类似 `@ToString`，`@EqualsAndHashCode` 还可以使用需要作为比较的字段和排除不需要比较的字段
 ```java
@@ -172,7 +170,7 @@ public class User4 {
 ```
 
 
-### 7 @Data/@Value
+## 7 @Data/@Value
 
 `@Data/@Value` 注解，提供了更综合的生成代码功能，等价于下面几个注解
 
@@ -185,7 +183,7 @@ public class User4 {
 
 两个注解都只能使用在类上，与 `@Data` 不同， `@Value` 用来修饰不可变的类上。一般实体类没有特别的限制的话，通常可以直接使用 `@Data` 注解修饰。
 
-### 8 @Builder
+## 8 @Builder
 
 `@Builder` 是一个非常强大的注解，提供了一种基于建造者模式的构建对象的 API。使用 `@Builder` 注解为给我们的实体类自动生成 `builder()` 方法，并且直接根据字段名称方法进行字段赋值，最后使用 `build()`方法构建出一个实体对象。
 ```java
@@ -229,7 +227,7 @@ public class Child extends Parent {
 
 也可以参考此文方式去处理继承的情况：[lomboks-builder-annotation-and-inheritance/](https://reinhard.codes/2015/09/16/lomboks-builder-annotation-and-inheritance/)
 
-### 9. 日志注解
+## 9. 日志注解
 
 应对程序类中常见不同框架 Logger 对象，Lombok 也提供了注解，来自动生成 Logger 对象，Lombok 支持了多个日志框架，并且提供对应的注解如下：
 
@@ -249,7 +247,7 @@ public class Child extends Parent {
 
 *   `@XSlf4j` 等价效果: `private static final org.slf4j.ext.XLogger log = org.slf4j.ext.XLoggerFactory.getXLogger(LogExample.class);`
 
-### 10. @Cleanup
+## 10. @Cleanup
 
 `@Cleanup` 用于标记需要释放清理操作的资源对象变量，如 `FileInputStream`, `FileOutputStream` 等，标记之后资源对象使用完毕后，就会被自动关闭和清理，实际上这里 Lombok 实现效果与 Java7 特性 `try with resource` 一样, 为我们屏蔽了关闭资源的模板代码。
 ```java
@@ -299,7 +297,7 @@ public class CleanupExample {
 }
 ```
 
-### 11 @SneakyThrows
+## 11 @SneakyThrows
 
 `@SneakyThrows` 主要用于在没有 `throws` 关键字的情况下，隐蔽地抛出受检查异常，为我们平常开发中需要异常抛出时省去的 `throw` 操作。
 ```java
