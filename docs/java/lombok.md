@@ -10,7 +10,7 @@
 
 > 基于 Eclipse 的 Lombok 插件安装方法这里就不详细描述了，官方也给了对应的文档说明：[eclipse-lombok安装](https://link.juejin.im?target=https%3A%2F%2Fprojectlombok.org%2Fsetup%2Feclipse)
 
-在 IDE 安装了 Lombok 插件后，我们就可以在 `pom.xml` 文件中添加 Lombok 的依赖进行使用了。
+在 IDE 安装了 Lombok 插件后，我们就可以在 `pom.xml` 文件中添加 Lombok 的依赖进行使用了。[其它build工具安装方式](https://www.projectlombok.org/setup/overview)
 ```xml
     <dependency>
         <groupId>org.projectlombok</groupId>
