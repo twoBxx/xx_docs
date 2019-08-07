@@ -5,3 +5,4 @@
     * [科学上网shadowsocks配置](softwares/shadowsocks)
 * java相关
     * [lombok](java/lombok)
+    * [java8学习](java/java8学习)
