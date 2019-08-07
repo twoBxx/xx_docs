@@ -1,4 +1,3 @@
-## java8
 
 ### Functional Interface
 
